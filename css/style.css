@@ -1,0 +1,507 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    transition: all 5ms 0.1s ease-in-out;
+    list-style-type: none;
+}
+::-webkit-scrollbar{
+    width: 14px;
+}
+::-webkit-scrollbar-track{
+    background-color:rgb(204, 201, 201);
+}
+::-webkit-scrollbar-thumb{
+    background-color: #016cc7;
+    border-radius: 5px;
+    border: .1rem solid transparent;
+    background-clip: content-box;
+}
+a{
+    color: white;
+}
+button{
+    cursor: pointer;
+}
+:root{
+    --yellow:#fcd93b;
+    --blue:#016cc7;
+    --orange:#dd5138;
+}
+html{
+    font-size: 90%;
+    scroll-behavior: smooth;
+}
+#Home{
+    display: flex;
+    padding: 5rem  6rem;
+    background-color: var(--blue);
+}
+.home-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+}
+.rocket{
+    display: flex;
+    
+    align-items: center;
+}
+.rocket img{
+    
+    height: 100%;
+}
+.home-text h2{
+    font-size: 2.5rem;
+    color: white;
+    font-weight: lighter;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+}
+.home-text h3 {
+    font-size: 1.7rem;
+    color: white;
+    font-weight: lighter;
+    margin: 1.5rem 0;
+    font-family: 'Oswald', sans-serif;
+}
+.home-text p{
+    font-size: 1.2rem;
+    color: rgb(179, 178, 178);
+}
+.home-text button{
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    background-color: var(--orange);
+    border: none;
+    color: white;
+    margin-top: 5rem;
+    cursor: pointer;
+    
+}
+.arrow{
+    transition: all 4ms 5ms ease-in-out l;
+}
+.home-text button:hover{
+    color: rgb(172, 172, 172);
+}
+
+
+@media all and (max-width:996px){
+    html{
+        font-size: 80%;
+    }
+    .rocket{
+        margin: 0 0 0 2rem;
+    }
+    .rocket img{
+        height: 80%;
+    }
+}
+@media all and (max-width:946px){
+    html{
+        font-size: 70%;
+        
+    }
+    .rocket img{
+        height: 70%;
+    }
+}
+@media all and (max-width:897px){
+  .rocket img{
+    height: 50%;
+    width: 80%;
+    margin: auto;
+  }
+ 
+}
+@media all and (max-width:732px){
+    #Home{
+        flex-direction: column;
+    }
+    html{
+        font-size: 70%;
+    }
+    .home-text{
+       justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+@media all and (max-width:535px){
+    .rocket{
+        display: none;
+    }
+    #home{
+        padding:5rem 4rem ;
+    }
+    html{
+        font-size: 90%;
+    }
+}
+@media (max-width:320px){
+    .home-text button{
+        font-size: 1rem;
+        padding: 1rem 1.7rem;
+    }
+}
+.navbaar{
+    height: 140px ;
+    width: 20px;
+    position: fixed;
+    right: 3vw;
+    top: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between ;
+    padding: 8px 1px;
+    border-radius: 25px ;
+
+}
+.dot{
+    border-radius: 20px;
+    height: 10px;
+    width: 10px;
+    background-color: #dd5138;
+    color: #dd5138;
+    transition: all 0.3s 1ms ease-in;
+}
+.nav-item{
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+.dotname{
+    display: none;
+    color: black;
+    transition: all 1s 3s;
+}
+.nav-item:hover .dotname{
+    display: inline;
+    position: fixed;
+    margin-right: 1.3rem;
+}
+.nav-item:hover .dot{
+    height: 13px;
+    width: 13px;}
+.dotname{
+    color: white;
+    background-color: #dd5138;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+    margin-right: 0.3rem; ;
+  border-radius: 15px;
+  text-transform: capitalize;
+    
+}
+@media (max-width:320px){
+
+}
+/* #speakers{
+    text-align: center;
+}
+#speakers h1{
+    font-family:'Montserrat', sans-serif ;
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+.speaker-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box{
+    font-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(210, 210, 210);
+    flex-basis: 23%;
+    padding: 0 1rem;
+    height: 420px;
+    justify-content: center;
+    border-radius: 7px;
+    margin: 1rem 1rem;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.box h1{
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    margin: 1rem 0;
+    word-spacing: 2px;
+}
+.box p{
+    line-height: 24px;
+    font-size: 1em;
+    word-spacing: 2px;
+    text-align: center;
+    font-family:'Montserrat', sans-serif;
+    font-weight: bold;
+
+} 
+.box img{
+    height: 7em;
+    width: 7em; 
+    border: 5px solid rgb(223, 223, 223);
+    border-radius: 70px;
+}
+.box-icon{
+    color: #016cc7;
+    font-size: 2em;
+    margin: 1em 0 1.2em 0 ;
+
+}
+.box-icon i{
+    padding: 0 10px;
+}
+.box:hover{
+transform: translateY(-10px)   
+}
+@media all and (max-width:1190px)
+{
+    #tickets{
+        font-size: 100%;
+    }
+.box{
+    flex-basis: 32%;
+}
+}
+
+@media (min-width:200px) and (max-width:700px){
+    .box{
+        flex-basis: 50%;
+        font-size: 100%;
+    }
+
+}
+@media(max-width:540px){
+    .box{flex-basis: 100%;
+            font-size: 100%;
+}}
+@media(max-width:300px){
+    .box{
+        font-size: 75%;
+    }
+} */
+#tickets{
+    font-size: 100%;
+    background-color: var(--yellow);
+
+}
+#tickets h1{
+    color: black;
+    text-align: center;
+    font-family: 'Yantramanav', sans-serif;
+    padding:1em 0 0 0 ;
+    font-weight: bolder  ;
+    font-size: 2.1em;
+    margin-bottom: 2em;
+}
+.ticket-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.box2{
+    text-align: center;
+    margin: 0 0em 2em 0em ;
+    flex-basis: 30%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;   
+}
+.box2 h2{
+    font-size: 1.5em;
+    /* font-weight: lighter; */
+    font-family:'Montserrat', sans-serif ;
+    margin-bottom: 1em;
+    color: rgb(83, 83, 83);
+}
+.box2 span{
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 5em;
+    letter-spacing: 3px;
+    color: #dd5138;
+}
+.box2 p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em  ;
+    font-weight: bold;
+    margin: 1em 0;
+    word-spacing: 2px;
+}
+.box2 button{
+    font-family:'Montserrat', sans-serif ;
+    font-size: 1em;
+    padding: 1em 0;
+    width: 17em;
+    background-color: var(--orange);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    
+}
+.box2 button:hover{
+    color: black;
+}
+
+
+@media (min-width:200px) and (max-width:600px){
+    .ticket-container{
+        flex-direction: column;
+        
+    }
+    .box2{
+        border: none;
+    }
+}
+.Schedule-h1{
+    text-align: center;
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 30px;
+    margin-top: 1em;
+}
+
+.box3 img{
+    height: 7rem;
+    width: 7rem; 
+    margin: 0 1em 0 0;
+}
+.Schedule-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 100%;
+}
+.box3{
+    display: flex;
+    flex-basis: 40%;
+    margin: 4em 2em 0 0;
+}
+.box3-content h1{
+ font-family: 'Yantramanav', sans-serif;
+    font-weight: bolder;
+    font-size: 1.5em;
+    margin: 0 0 0.4em 0;
+}
+.box3-content span{
+    font-family:'Yantramanav', sans-serif ;
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+.box3-content p{
+    font-family:'Yantramanav', sans-serif ;
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-top: 0.2em;
+
+}
+
+@media (min-width:280px) and (max-width:900px){
+    .Schedule-box{
+        flex-direction: column;
+        margin: 0 2em;
+        font-size: 70%;
+    }
+    
+}
+#contact{
+    display: flex;
+    background-color: #3a3a3a;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 4rem 0 0 0 ;
+    font-size: 100%;
+}
+.info,.contact-form{
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    margin: 0 0 1rem 0;
+}
+.info h1,.contact-form h1{
+    color: white;
+    font-family: 'Yantramanav', sans-serif ;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 1.8em;
+    margin: 1rem 0 0 0;
+}
+label,.info p{
+    color: white;
+}
+label{
+    font-weight: bolder;
+    margin-right: 1rem;
+    font-size: 1.1em;
+    text-transform: capitalize;
+}
+input{
+    width: 80%;
+    border-radius: 4px;
+    padding: 1.2rem 1rem;
+    border: none;
+    font-size: 0.9em;
+    margin: 0 0 1.4rem 0;
+}
+
+textarea{
+    width: 80%;
+}
+.contact-form button{
+    background-color: #b7a03a;
+    color: black;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 1em;
+}
+.info p{
+    font-size: 1.2em;
+    padding: 0 30px;
+}
+@media (min-width:280px) and (max-width:900px){
+    #contact{
+        font-size: 140%;
+    }
+    .info,.contact-form{
+        flex-basis: 100%;
+        width: 100%;
+        padding: 20px;
+    }
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #2a2a2a;
+}
+footer p{
+    font-family: 'Yantramanav', sans-serif ;
+    padding: 35px 0 30px 20px;
+    font-size: 1.2em;
+    color:rgb(207, 206, 206);
+}
+footer ul {
+    display: flex;
+    align-items: center;
+}
+footer ul li{
+    font-family: 'Yantramanav', sans-serif ;
+    color: #b7a03a;
+    padding: 10px;
+    padding-right:20px ;
+    font-weight: bolder;
+}
+@media (min-width:280px) and (max-width:900px){
+    footer{
+        flex-direction: column;
+    }
+}
